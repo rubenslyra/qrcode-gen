@@ -1,0 +1,33 @@
+# UTF-8
+#
+# For more details about fixed file info 'ffi' see:
+# https://pyinstaller.org/en/stable/advanced-topics.html#capture-windows-version-data
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '040904B0',
+          [StringStruct('CompanyName', 'Rubinho Lyra'),
+           StringStruct('FileDescription', 'Gerador de QR Code Estilizados'),
+           StringStruct('FileVersion', '1.0.0.0'),
+           StringStruct('InternalName', 'QRCodeGenerator'),
+           StringStruct('LegalCopyright', 'Copyright (c) 2026 Rubinho Lyra'),
+           StringStruct('OriginalFilename', 'QRCodeGenerator.exe'),
+           StringStruct('ProductName', 'QR Code Generator - Rubinho Lyra'),
+           StringStruct('ProductVersion', '1.0.0'),
+           StringStruct('Comments', 'Ferramenta gratuita para geracao de QR Codes estilizados. Produzido por Rubinho Lyra.')])
+      ]),
+    VarFileInfo([VarStruct('Translation', 0x0409, 1200)])
+  ]
+)
