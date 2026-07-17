@@ -12,15 +12,15 @@ build_temp/
 icon.ico
 icon.png
 
+# Temp scripts
+capture.py
+screenshot_old.png
+
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Temp scripts
-capture.py
-screenshot_old.png
 
 # OS
 Thumbs.db

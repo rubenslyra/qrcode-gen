@@ -1,6 +1,9 @@
 @echo off
 chcp 65001 >nul
-title Gerador QR Code - Build
+title QR Code Generator - Build Windows
+
+set "ROOT=%~dp0.."
+pushd "%ROOT%"
 
 echo === Instalando dependencias ===
 pip install -r requirements.txt
@@ -30,7 +33,7 @@ pyinstaller --onefile --windowed ^
   --specpath . ^
   --version-file version_info.txt ^
   --manifest manifest.xml ^
-  qrcode_gen.py
+  src\qrcode_gen.py
 
 echo.
 echo === Limpando ===
@@ -42,4 +45,6 @@ if exist "QRCodeGenerator.spec" del QRCodeGenerator.spec
 echo.
 echo === PRONTO! ===
 echo Executavel em: dist\QRCodeGenerator.exe
+
+popd
 pause

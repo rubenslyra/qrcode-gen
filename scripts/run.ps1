@@ -1,12 +1,12 @@
-$python = "D:\laragon\bin\python\python-3.13\python.exe"
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$script = Join-Path $scriptDir "qrcode_gen.py"
+$root = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) ".."
+$script = Join-Path $root "src" "qrcode_gen.py"
+$python = "python"
 
 try {
     & $python -c "import qrcode, PIL" 2>&1 | Out-Null
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Instalando dependencias..." -ForegroundColor Yellow
-        & $python -m pip install qrcode[pil] pillow pyinstaller
+        & $python -m pip install qrcode[pil] pillow
     }
 }
 catch {

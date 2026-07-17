@@ -2,13 +2,13 @@
 chcp 65001 >nul
 title Gerador QR Code
 
-set "PYTHON=D:\laragon\bin\python\python-3.13\python.exe"
-set "DIR=%~dp0"
+set "ROOT=%~dp0.."
+set "PYTHON=python"
 
 "%PYTHON%" -c "import qrcode, PIL" 2>nul
 if %errorlevel% neq 0 (
     echo Instalando dependencias...
-    "%PYTHON%" -m pip install qrcode[pil] pillow pyinstaller
+    "%PYTHON%" -m pip install qrcode[pil] pillow
 )
 
 cls
@@ -23,7 +23,7 @@ echo         Gerador de QR Code — Rubinho Lyra
 echo.
 echo     Produzido por Rubinho Lyra (@rubinholyra)
 echo.
-"%PYTHON%" "%DIR%qrcode_gen.py"
+"%PYTHON%" "%ROOT%\src\qrcode_gen.py"
 if %errorlevel% neq 0 (
     echo.
     echo Pressione qualquer tecla para sair...
