@@ -18,6 +18,10 @@ icon.png
 *.swp
 *.swo
 
+# Temp scripts
+capture.py
+screenshot_old.png
+
 # OS
 Thumbs.db
 .DS_Store
