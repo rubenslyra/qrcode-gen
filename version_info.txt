@@ -28,6 +28,6 @@ VSVersionInfo(
            StringStruct('ProductVersion', '1.0.0'),
            StringStruct('Comments', 'Ferramenta gratuita para geracao de QR Codes estilizados. Produzido por Rubinho Lyra.')])
       ]),
-    VarFileInfo([VarStruct('Translation', 0x0409, 1200)])
+    VarFileInfo([VarStruct('Translation', [0x0409, 1200])])
   ]
 )
